@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+}
+
+body {
+    background-color: rgb(78, 116, 78);
+}
+
+/*Navbar*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #04AA6D;
+}
+
+/*404 Not Found*/
+.not-found {
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+/*Index*/
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.card {
+    background-color: white;
+    width: 250px;
+    height: 470px;
+    margin: 15px;
+    border: 3px solid white;
+    border-radius: 12px;
+}
+
+.card h3 {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.card img {
+    margin-top: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.btns {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    background-color: white;
+    border: 1px solid rgb(78, 116, 78);
+    color: rgb(78, 116, 78);
+    padding: 5px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 5px;
+    border-radius: 12px;
+}
+
+.btn:hover {
+    background-color: rgb(55, 87, 55);
+    color: white;
+}
+
+.delete:hover {
+    background-color: orangered !important;
+    border: 1px solid white;
+}
+.form-movie {
+    display: block;
+    margin-left: 8em;
+    margin-top: 2em;
+}
+.form-control label,
+.form-control {
+    display: block;
+    width: 18rem;
+    margin-bottom: 0.25rem;
+}
+.form-control textarea {
+    width: 25rem;
+}
+.form-control input,
+.form-control textarea {
+    border: 1px solid #a1a1a1;
+    font: inherit;
+    border-radius: 2px;
+}
+
+.form-control input:focus,
+.form-control textarea:focus {
+    outline-color: #00695c;
+}
+.detail-image {
+    margin: 1.5em;
+    width: 350px;
+    border-radius: 10px;
+}
+.detail-image img {
+    width: 100%;
+}
+.info {
+    margin: 1em;
+    max-width: 600px;
+    color: white;
+}
+.info h1,
+.info p,
+.info strong {
+    margin-bottom: 1em;
+}
+.info h1 {
+    font-size: 45px;
+}
+.info p {
+    font-size: 18px;
+}
+.info strong {
+    font-size: 22px;
+}

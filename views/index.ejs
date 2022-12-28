@@ -1,0 +1,29 @@
+<%- include('includes/head.ejs') %>
+</head>
+<body>
+    <%- include('includes/navbar.ejs') %>
+    <% if(movies.length > 0) { %>
+        <div class="container">
+        <% for (let mov of movies) { %>
+            <div class="card">
+                <h3><% if (mov.title.length >= 16) { %>
+                    <%= mov.title.slice(0, 16) %> 
+                    <% } else { %> 
+                        <%= mov.title %>
+                    <% } %> (<%= mov.year%>)</h3>
+                <img src="<%=mov.posterUrl%>">
+                <div class="btns">
+                    <a href="/edit-movie/<%= mov.id %>?edit=true" class="btn">Edit</a>
+                    <a href="/movie-detail/<%= mov.id %>" class="btn">Details</a>
+                    <form action="/delete-movie" method="POST">
+                        <input type="hidden" value="<%= mov.id %>" name="movieId">
+                        <button class="delete btn">Delete</button>
+                    </form>
+                </div>
+            </div>
+        <% } %>
+    <% } else { %>
+        <p>No movies found</p>
+    <% } %>
+    </div>
+    <%- include('includes/end.ejs') %>
